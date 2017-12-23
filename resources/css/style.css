@@ -235,3 +235,45 @@ header span {
   padding: 0.2rem 1rem;
   text-align: left;
 }
+
+/* THESIS STYLING */
+
+.thesis {
+  background: #ecf0f1;
+}
+
+.thesis h3 {
+  text-align: center;
+}
+
+.video {
+  display: flex;
+  width: 100%;
+}
+
+.main-video {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 24px;
+}
+
+.main-video video {
+  width: 100%;
+}
+
+.video-snippets {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.snippet {
+  display: flex;
+}
+
+.snippet-img {
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
