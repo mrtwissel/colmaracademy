@@ -6,10 +6,6 @@ body {
   color: #424242;
 }
 
-div {
-  border: 1px solid gray;
-}
-
 h1 {
   font-weight: 900;
   font-size: 3rem;
@@ -295,6 +291,7 @@ header span {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0px 72px;
+  max-width: 1200px;
 }
 
 .course {
@@ -395,6 +392,10 @@ header span {
   width: 35%;
   height: auto;
   padding: 1rem;
+}
+
+.videos-mobile {
+  display: none;
 }
 
 @media only screen and (max-width: 480px) {
