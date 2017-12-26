@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  margin: 32px 0;
+  padding: 32px 0;
   font-size: 2.0rem;
   font-weight: 700;
 }
@@ -71,6 +71,8 @@ header span {
   display: inline-block;
   padding: 1rem 1rem;
   transition: all 0.3s;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .navigation ul li:hover {
@@ -78,6 +80,31 @@ header span {
   color: white;
   border-radius: 3px;
 }
+
+.mobile-navigation {
+  display: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+  header .header-logo, .navigation {
+    display: none;
+  }
+
+  .mobile-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 4rem;
+      padding-right: 2rem; 
+    }
+
+  .mobile-nav-item {
+      padding: 0 24px;
+    }
+}
+
 
 /* TITLE STORY STYLING */
 
@@ -106,8 +133,6 @@ header span {
   margin-right: 30px;
 }
 
-
-
 .headline p {
   font-weight: 600;
   font-size: 1.5rem;
@@ -129,6 +154,31 @@ header span {
 .btn1:hover {
   opacity: 0.75;
 }
+
+@media only screen and (max-width: 480px) {
+  .title {
+    flex-direction: column;
+  }
+
+  .banner {
+    width: 100%;
+    margin: 0;
+  }
+
+  .headline {
+    width: auto;
+    padding: 32px 16px;
+    margin-right: 0;
+  }
+
+  .headline p {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+}
+
 
 /* INFORMATION STYLING */
 
@@ -152,7 +202,6 @@ header span {
 }
 
 .main-information span {
-  font-style: bold;
   padding-top: 24px;
 }
 
@@ -161,6 +210,7 @@ header span {
   flex-direction: column;
   align-items: center;
   width: 40%;
+  margin-bottom: 2rem;
 }
 
 .snippet {
@@ -178,6 +228,10 @@ header span {
   height: 140px;
 }
 
+.snippet-img-mobile {
+  display: none;
+}
+
 .snippet-text {
   width: 65%;
   padding-left: 1rem;
@@ -190,10 +244,46 @@ header span {
   display: block;
 }
 
+@media only screen and (max-width: 480px) {
+  .information {
+    flex-direction: column;
+  }
+
+  .main-information {
+    display: none;
+  }
+
+  .information-snippets {
+    width: 100%;
+  }
+
+  .snippet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .snippet-img {
+    display: none;
+  }
+
+  .snippet-img-mobile {
+    display: block;
+    padding: 1rem;
+  }
+  .snippet-img-mobile img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /* learning STYLING */
 
 .learning {
   background: #ECEFF1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
 }
 
 .learning h2 {
@@ -204,7 +294,7 @@ header span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 32px 72px;
+  margin: 0px 72px;
 }
 
 .course {
@@ -236,17 +326,42 @@ header span {
   text-align: left;
 }
 
-/* THESIS STYLING */
-
-.thesis {
-  background: #ecf0f1;
+.courses-mobile {
+  display: none;
 }
 
-.thesis h3 {
+@media only screen and (max-width: 480px) {
+  .courses {
+    display: none;
+  }
+
+  .courses-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .course-mobile {
+    background-color: #bdc3c7;
+    padding: 1rem 2rem 1rem 1.0rem;
+    margin-bottom: 0.5rem;
+    width: 250px;
+  }
+
+  .course-mobile a {
+    text-decoration: none;
+    color: #424242;
+  }
+}
+
+
+/* THESIS STYLING */
+
+.thesis h2 {
   text-align: center;
 }
 
-.video {
+.videos {
   display: flex;
   width: 100%;
 }
@@ -255,11 +370,15 @@ header span {
   display: flex;
   flex-direction: column;
   width: 60%;
-  padding: 24px;
+  padding: 0px 24px 24px 24px;
 }
 
 .main-video video {
   width: 100%;
+}
+
+.main-video h3 {
+  margin: 1.2rem 0;
 }
 
 .video-snippets {
@@ -276,4 +395,44 @@ header span {
   width: 35%;
   height: auto;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .videos {
+    display: none;
+  }
+
+  .videos-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .videos-mobile video {
+    width: 100%;
+  }
+}
+
+/* FOOTER STYLING */
+
+footer {
+  border-top: 1px solid #ECEFF1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+footer ul li {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+footer p, li {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 480px) {
+  #imprint {
+    display: none;
+  }
 }
